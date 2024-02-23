@@ -41,8 +41,26 @@ type Client struct {
 // baseURL is the default base URL.
 var baseURL = flagx.MustNewURL("https://locate.measurementlab.net/v2/nearest/")
 
+var querySite = flag.String("site", "", "Specify the server site")
+var queryCountry = flag.String("country", "", "Specify the country to select servers from")
+var queryRegion = flag.String("region", "", "Specify the region to select servers from (ISO 3166-2 formatted)")
+var queryType string
+var queryValue string
+
 func init() {
 	flag.Var(&baseURL, "locate.url", "The base url for the Locate API")
+	//initialize query type and value
+	//site, country, region are mutually exclusive
+	if *querySite != "" {
+		queryType = "site"
+		queryValue = *querySite
+	} else if *queryCountry != "" {
+		queryType = "country"
+		queryValue = *queryCountry
+	} else if *queryRegion != "" {
+		queryType = "region"
+		queryValue = *queryRegion
+	}
 }
 
 // NewClient creates a new Client instance. The userAgent must not be empty.
@@ -61,6 +79,9 @@ func (c *Client) Nearest(ctx context.Context, service string) ([]v2.Target, erro
 	var status int
 	reqURL := *c.BaseURL
 	reqURL.Path = path.Join(reqURL.Path, service)
+	q := reqURL.Query()
+	q.Set(queryType, queryValue)
+	reqURL.RawQuery = q.Encode()
 	fmt.Println(reqURL.String())
 	data, status, err = c.get(ctx, reqURL.String())
 	if err != nil {
