@@ -82,6 +82,7 @@ func (c *Client) Nearest(ctx context.Context, service string) ([]v2.Target, erro
 	reqURL.Path = path.Join(reqURL.Path, service)
 
 	q := reqURL.Query()
+	fmt.Println("\n" + queryType + queryValue)
 	q.Set(queryType, queryValue)
 	reqURL.RawQuery = q.Encode()
 	fmt.Println("\n" + reqURL.String())
