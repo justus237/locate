@@ -52,12 +52,15 @@ func init() {
 	//initialize query type and value
 	//site, country, region are mutually exclusive
 	if *querySite != "" {
+		fmt.Println(*querySite)
 		queryType = "site"
 		queryValue = *querySite
 	} else if *queryCountry != "" {
+		fmt.Println(*queryCountry)
 		queryType = "country"
 		queryValue = *queryCountry
 	} else if *queryRegion != "" {
+		fmt.Println(*queryRegion)
 		queryType = "region"
 		queryValue = *queryRegion
 	}
