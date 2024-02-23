@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/gomodule/redigo/redis"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/memorystore"
+	"github.com/justus237/locate/metrics"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/go/host"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/memorystore"
-	"github.com/m-lab/locate/metrics"
-	"github.com/m-lab/locate/static"
 )
 
 var (

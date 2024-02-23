@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/metrics"
 	"github.com/m-lab/go/content"
 	"github.com/m-lab/go/host"
 	"github.com/m-lab/go/memoryless"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/metrics"
 )
 
 // Loader is a structure to load registration data from siteinfo.

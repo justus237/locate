@@ -4,8 +4,8 @@ import (
 	"context"
 	"io/ioutil"
 
+	"github.com/justus237/locate/prometheus"
 	"github.com/m-lab/access/token"
-	"github.com/m-lab/locate/prometheus"
 	"github.com/prometheus/common/config"
 )
 

@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/metrics"
-	"github.com/m-lab/locate/static"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/metrics"
+	"github.com/justus237/locate/static"
 	log "github.com/sirupsen/logrus"
 )
 

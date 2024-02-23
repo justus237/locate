@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/justus237/locate/api/locate"
 	"github.com/m-lab/go/testingx"
-	"github.com/m-lab/locate/api/locate"
 )
 
 func TestLocateServer_Success(t *testing.T) {

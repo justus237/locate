@@ -6,14 +6,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m-lab/locate/static"
+	"github.com/justus237/locate/static"
 
 	"github.com/go-test/deep"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/connection/testdata"
+	"github.com/justus237/locate/heartbeat/heartbeattest"
+	"github.com/justus237/locate/metrics"
 	"github.com/m-lab/go/testingx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/connection/testdata"
-	"github.com/m-lab/locate/heartbeat/heartbeattest"
-	"github.com/m-lab/locate/metrics"
 	prometheus "github.com/prometheus/client_model/go"
 )
 

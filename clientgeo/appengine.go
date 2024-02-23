@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/apex/log"
-	"github.com/m-lab/locate/metrics"
-	"github.com/m-lab/locate/static"
+	"github.com/justus237/locate/metrics"
+	"github.com/justus237/locate/static"
 )
 
 var (

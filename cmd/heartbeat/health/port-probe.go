@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/m-lab/locate/metrics"
+	"github.com/justus237/locate/metrics"
 )
 
 const (

@@ -3,10 +3,10 @@ package handler
 import (
 	"net/http"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/access/controller"
 	"github.com/m-lab/go/host"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/static"
 )
 
 // Monitoring issues access tokens for end to end monitoring requests.

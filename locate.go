@@ -14,6 +14,16 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"gopkg.in/square/go-jose.v2/jwt"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/clientgeo"
+	"github.com/justus237/locate/handler"
+	"github.com/justus237/locate/heartbeat"
+	"github.com/justus237/locate/limits"
+	"github.com/justus237/locate/memorystore"
+	"github.com/justus237/locate/metrics"
+	"github.com/justus237/locate/prometheus"
+	"github.com/justus237/locate/secrets"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/access/controller"
 	"github.com/m-lab/access/token"
 	"github.com/m-lab/go/content"
@@ -22,16 +32,6 @@ import (
 	"github.com/m-lab/go/memoryless"
 	"github.com/m-lab/go/prometheusx"
 	"github.com/m-lab/go/rtx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/clientgeo"
-	"github.com/m-lab/locate/handler"
-	"github.com/m-lab/locate/heartbeat"
-	"github.com/m-lab/locate/limits"
-	"github.com/m-lab/locate/memorystore"
-	"github.com/m-lab/locate/metrics"
-	"github.com/m-lab/locate/prometheus"
-	"github.com/m-lab/locate/secrets"
-	"github.com/m-lab/locate/static"
 )
 
 var (
@@ -72,7 +72,7 @@ func init() {
 	flag.BoolVar(&locatorMM, "locator-maxmind", false, "Use the MaxMind clientgeo locator")
 	flag.Var(&maxmind, "maxmind-url", "When -locator-maxmind is true, the tar URL of MaxMind IP database. May be: gs://bucket/file or file:./relativepath/file")
 	flag.Var(&keySource, "key-source", "Where to load signer and verifier keys")
-	flag.StringVar(&limitsPath, "limits-path", "/go/src/github.com/m-lab/locate/limits/config.yaml", "Path to the limits config file")
+	flag.StringVar(&limitsPath, "limits-path", "/go/src/github.com/justus237/locate/limits/config.yaml", "Path to the limits config file")
 
 	// Enable logging with line numbers to trace error locations.
 	log.SetFlags(log.LUTC | log.Llongfile)

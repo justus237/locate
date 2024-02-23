@@ -6,13 +6,14 @@ import (
 	"encoding/json"
 	"errors"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"path"
 
+	v2 "github.com/justus237/locate/api/v2"
 	"github.com/m-lab/go/flagx"
-	v2 "github.com/m-lab/locate/api/v2"
 )
 
 // ErrNoAvailableServers is returned when there are no available servers. Batch
@@ -60,6 +61,7 @@ func (c *Client) Nearest(ctx context.Context, service string) ([]v2.Target, erro
 	var status int
 	reqURL := *c.BaseURL
 	reqURL.Path = path.Join(reqURL.Path, service)
+	fmt.Println(reqURL.String())
 	data, status, err = c.get(ctx, reqURL.String())
 	if err != nil {
 		return nil, err

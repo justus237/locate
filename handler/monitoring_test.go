@@ -11,11 +11,11 @@ import (
 	"gopkg.in/square/go-jose.v2/jwt"
 
 	"github.com/go-test/deep"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/clientgeo"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/access/controller"
 	"github.com/m-lab/go/rtx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/clientgeo"
-	"github.com/m-lab/locate/static"
 	prom "github.com/prometheus/client_golang/api/prometheus/v1"
 )
 

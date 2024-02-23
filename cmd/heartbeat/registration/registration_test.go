@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/go-test/deep"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/go/host"
 	"github.com/m-lab/go/memoryless"
 	"github.com/m-lab/go/testingx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/static"
 )
 
 var (

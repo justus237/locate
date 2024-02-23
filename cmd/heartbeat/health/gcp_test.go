@@ -7,7 +7,7 @@ import (
 
 	"cloud.google.com/go/compute/apiv1/computepb"
 	"github.com/googleapis/gax-go"
-	"github.com/m-lab/locate/cmd/heartbeat/metadata"
+	"github.com/justus237/locate/cmd/heartbeat/metadata"
 )
 
 func TestGCPChecker_GetHealth(t *testing.T) {

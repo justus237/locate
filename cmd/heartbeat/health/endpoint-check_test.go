@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m-lab/locate/cmd/heartbeat/health/healthtest"
+	"github.com/justus237/locate/cmd/heartbeat/health/healthtest"
 )
 
 func Test_checkHealthEndpoint(t *testing.T) {

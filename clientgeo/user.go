@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/m-lab/locate/static"
+	"github.com/justus237/locate/static"
 )
 
 // UserLocator definition for accepting user provided location hints.

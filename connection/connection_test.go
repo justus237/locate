@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/m-lab/locate/connection/testdata"
+	"github.com/justus237/locate/connection/testdata"
 )
 
 func Test_Dial(t *testing.T) {

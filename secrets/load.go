@@ -9,8 +9,8 @@ import (
 
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
 	"github.com/googleapis/gax-go"
+	"github.com/justus237/locate/prometheus"
 	"github.com/m-lab/access/token"
-	"github.com/m-lab/locate/prometheus"
 	"github.com/prometheus/common/config"
 	"google.golang.org/api/iterator"
 	secretmanagerpb "google.golang.org/genproto/googleapis/cloud/secretmanager/v1"

@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/m-lab/locate/prometheus"
-	"github.com/m-lab/locate/secrets"
+	"github.com/justus237/locate/prometheus"
+	"github.com/justus237/locate/secrets"
 )
 
 func TestLocalConfig_LoadSigner(t *testing.T) {

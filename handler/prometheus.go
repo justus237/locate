@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/m-lab/locate/static"
+	"github.com/justus237/locate/static"
 	prom "github.com/prometheus/client_golang/api/prometheus/v1"
 	"github.com/prometheus/common/model"
 )

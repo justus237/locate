@@ -8,9 +8,9 @@ import (
 	"sort"
 	"testing"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/heartbeat/heartbeattest"
 	"github.com/m-lab/go/host"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/heartbeat/heartbeattest"
 )
 
 var (

@@ -1,4 +1,4 @@
-module github.com/m-lab/locate
+module github.com/justus237/locate
 
 go 1.20
 

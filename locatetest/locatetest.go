@@ -10,10 +10,10 @@ import (
 
 	"gopkg.in/square/go-jose.v2/jwt"
 
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/clientgeo"
-	"github.com/m-lab/locate/handler"
-	"github.com/m-lab/locate/heartbeat"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/clientgeo"
+	"github.com/justus237/locate/handler"
+	"github.com/justus237/locate/heartbeat"
 	prom "github.com/prometheus/client_golang/api/prometheus/v1"
 )
 

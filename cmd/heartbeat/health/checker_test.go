@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/m-lab/locate/cmd/heartbeat/health/healthtest"
+	"github.com/justus237/locate/cmd/heartbeat/health/healthtest"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes/fake"
 )

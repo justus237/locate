@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/m-lab/locate/metrics"
+	"github.com/justus237/locate/metrics"
 )
 
 var (

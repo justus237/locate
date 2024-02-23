@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/connection"
+	"github.com/justus237/locate/connection/testdata"
 	"github.com/m-lab/go/rtx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/connection"
-	"github.com/m-lab/locate/connection/testdata"
 )
 
 func Test_main(t *testing.T) {

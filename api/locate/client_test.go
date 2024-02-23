@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	v2 "github.com/m-lab/locate/api/v2"
+	v2 "github.com/justus237/locate/api/v2"
 )
 
 func TestClient_Nearest(t *testing.T) {

@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m-lab/locate/clientgeo"
-	"github.com/m-lab/locate/connection/testdata"
-	"github.com/m-lab/locate/heartbeat"
-	"github.com/m-lab/locate/heartbeat/heartbeattest"
+	"github.com/justus237/locate/clientgeo"
+	"github.com/justus237/locate/connection/testdata"
+	"github.com/justus237/locate/heartbeat"
+	"github.com/justus237/locate/heartbeat/heartbeattest"
 	prom "github.com/prometheus/client_golang/api/prometheus/v1"
 )
 

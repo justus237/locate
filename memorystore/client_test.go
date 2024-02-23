@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-test/deep"
 	"github.com/gomodule/redigo/redis"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/connection/testdata"
 	"github.com/m-lab/go/testingx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/connection/testdata"
 	"github.com/rafaeljusto/redigomock"
 )
 

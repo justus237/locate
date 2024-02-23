@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	"github.com/gomodule/redigo/redis"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/memorystore"
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/memorystore"
 )
 
 var (

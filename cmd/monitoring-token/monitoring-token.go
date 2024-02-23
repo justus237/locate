@@ -10,14 +10,14 @@ import (
 	"os/exec"
 	"time"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/proxy"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/access/token"
 	"github.com/m-lab/go/flagx"
 	"github.com/m-lab/go/logx"
 	"github.com/m-lab/go/pretty"
 	"github.com/m-lab/go/rtx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/proxy"
-	"github.com/m-lab/locate/static"
 	"gopkg.in/square/go-jose.v2/jwt"
 )
 

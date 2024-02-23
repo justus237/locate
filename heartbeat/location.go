@@ -7,11 +7,11 @@ import (
 	"sort"
 	"strconv"
 
+	v2 "github.com/justus237/locate/api/v2"
+	"github.com/justus237/locate/metrics"
+	"github.com/justus237/locate/static"
 	"github.com/m-lab/go/host"
 	"github.com/m-lab/go/mathx"
-	v2 "github.com/m-lab/locate/api/v2"
-	"github.com/m-lab/locate/metrics"
-	"github.com/m-lab/locate/static"
 )
 
 var (
