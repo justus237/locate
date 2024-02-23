@@ -46,23 +46,26 @@ var queryValue string
 
 func init() {
 	flag.Var(&baseURL, "locate.url", "The base url for the Locate API")
-	var querySite = flag.String("site", "", "Specify the server site")
-	var queryCountry = flag.String("country", "", "Specify the country to select servers from")
-	var queryRegion = flag.String("region", "", "Specify the region to select servers from (ISO 3166-2 formatted)")
+	var querySite string
+	var queryCountry string
+	var queryRegion string
+	flag.StringVar(&querySite, "site", "", "Specify the server site")
+	flag.StringVar(&queryCountry, "country", "", "Specify the country to select servers from")
+	flag.StringVar(&queryRegion, "region", "", "Specify the region to select servers from (ISO 3166-2 formatted)")
 	//initialize query type and value
 	//site, country, region are mutually exclusive
-	if *querySite != "" {
-		fmt.Println(*querySite)
+	if querySite != "" {
+		fmt.Println(querySite)
 		queryType = "site"
-		queryValue = *querySite
-	} else if *queryCountry != "" {
-		fmt.Println(*queryCountry)
+		queryValue = querySite
+	} else if queryCountry != "" {
+		fmt.Println(queryCountry)
 		queryType = "country"
-		queryValue = *queryCountry
-	} else if *queryRegion != "" {
-		fmt.Println(*queryRegion)
+		queryValue = queryCountry
+	} else if queryRegion != "" {
+		fmt.Println(queryRegion)
 		queryType = "region"
-		queryValue = *queryRegion
+		queryValue = queryRegion
 	}
 	fmt.Println("initialized query type and value")
 }
