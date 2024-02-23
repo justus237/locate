@@ -39,21 +39,24 @@ type Client struct {
 
 // baseURL is the default base URL.
 var baseURL = flagx.MustNewURL("https://locate.measurementlab.net/v2/nearest/")
-var querySite = ""
-var queryCountry = ""
-var queryRegion = ""
 
+// there's probably a clever way to avoid introducing so many variables...
+var querySite string
+var queryCountry string
+var queryRegion string
 var queryType string
 var queryValue string
 
 func init() {
-	flag.Var(&baseURL, "locate.url", "The base url for the Locate API")
 	flag.StringVar(&querySite, "site", "", "Specify the server site")
 	flag.StringVar(&queryCountry, "country", "", "Specify the country to select servers from")
 	flag.StringVar(&queryRegion, "region", "", "Specify the region to select servers from (ISO 3166-2 formatted)")
-	flag.Parse()
-	//initialize query type and value
-	//site, country, region are mutually exclusive
+	flag.Var(&baseURL, "locate.url", "The base url for the Locate API")
+}
+
+// NewClient creates a new Client instance. The userAgent must not be empty.
+func NewClient(userAgent string) *Client {
+	//at some point before this, another function calls flag.Parse and the values will be set
 	if querySite != "" {
 		queryType = "site"
 		queryValue = querySite
@@ -64,10 +67,6 @@ func init() {
 		queryType = "region"
 		queryValue = queryRegion
 	}
-}
-
-// NewClient creates a new Client instance. The userAgent must not be empty.
-func NewClient(userAgent string) *Client {
 	return &Client{
 		HTTPClient: http.DefaultClient,
 		UserAgent:  userAgent,
